@@ -32,7 +32,7 @@ class Dog
 	end
 end
 
-rover=Dog.new
+rover=Dog.new("Rover")
 rover.bark
 
 q7: it will return an error, the method speak is never defined 
@@ -44,7 +44,7 @@ class Insect
   end
 
   def age_in_year
-  	age_in_days*7
+  	@age_in_days*7
   end
 end
 
@@ -69,9 +69,12 @@ emily.age
 
 q10:
 class Person
-	def initialize(age)
-		@age=age
-	end
-	def attr accessor (:age)
+ attr_accessor :age
+
+ def create_an_age(age)
+ 	@age=age
 	end
 end
+
+emily=Person.new
+emily.age
